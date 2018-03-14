@@ -48,10 +48,16 @@ namespace PrimerApp
 
         public void inicializar() //Llenar con aleatorios
         {
-            Random rnd = new Random ( );
+            Random rnd = new Random();
+            
+            
+
             for (int i = 0; i < BITS_PER_GENE; i++)
             {
-                gene[i] = rnd.Next(0, 2);
+                if (rnd.Next(0, 100) > 50)
+                    gene[i] = 0;
+                else
+                    gene[i] = 1;
             }
 
             geneGray[0] = gene[0];
