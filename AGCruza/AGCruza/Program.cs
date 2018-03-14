@@ -10,6 +10,7 @@ namespace AGCruza
     {
         static void Main(string[] args)
         {
+            Console.Write("Hola");
         }
     }
 }
