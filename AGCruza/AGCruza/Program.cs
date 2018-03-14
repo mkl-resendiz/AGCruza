@@ -35,9 +35,25 @@ namespace PrimerApp
         
         static void Main(string[] args)
         {
-            Individuo ind = new Individuo(5);
-            Console.WriteLine("[" + ind.ToString() + "]:" + ind.GetFenotipo() + " BINARIO");
-            Console.WriteLine("[" + ind.ToStringGray() + "]:" + ind.GetFenotipo() + " GRAY");
+            Individuo padre = new Individuo(6);
+            Individuo madre = new Individuo(6);
+            Console.WriteLine("Individuo Padre ->  ");
+            Console.WriteLine("[" + padre.ToString() + "]:" + padre.GetFenotipo() + " BINARIO");
+
+            Console.Read();
+            Console.WriteLine("Individuo Madre ->  ");
+            Console.WriteLine("[" + madre.ToString() + "]:" + madre.GetFenotipo() + " BINARIO");
+
+            Console.Read();
+            Individuo[] hijo = padre.croos1P(madre);
+
+            Console.WriteLine("Individuo Hijo 1 ->  ");
+            Console.WriteLine("[" + hijo[0].ToString() + "]:" + hijo[0].GetFenotipo() + " BINARIO");
+
+            Console.Read();
+            Console.WriteLine("Individuo Hijo 2 ->  ");
+            Console.WriteLine("[" + hijo[1].ToString() + "]:" + hijo[1].GetFenotipo() + " BINARIO");
+
             Console.Read();
         }
     }

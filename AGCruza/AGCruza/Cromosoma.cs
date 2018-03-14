@@ -8,9 +8,6 @@ namespace PrimerApp
 {
     class Cromosoma
     {
-
-
-
         private int BITS_PER_GENE;
         private int[] gene;
         private int[] geneGray;
@@ -41,10 +38,17 @@ namespace PrimerApp
               
             return value;
         }
+        public int getGeneAt(int i) {
+            return gene [i];
+        }
+
+        public void setGeneAt(int i, int b) {
+            gene[i] = b;
+        }
 
         public void inicializar() //Llenar con aleatorios
         {
-            Random rnd = new Random();
+            Random rnd = new Random ( );
             for (int i = 0; i < BITS_PER_GENE; i++)
             {
                 gene[i] = rnd.Next(2);
