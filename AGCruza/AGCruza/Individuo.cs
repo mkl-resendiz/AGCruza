@@ -37,6 +37,14 @@ namespace PrimerApp
             cromosoma = new Cromosoma(num_bits);
             cromosoma.inicializar();
         }
+        public Individuo(int[] bits)
+        {
+            cromosoma = new Cromosoma(bits.Length);
+            cromosoma.inicializar();
+            for (int i = 0; i < bits.Length; i++) {
+                cromosoma.setGeneAt(i, bits[i]);
+            }
+        }
 
         public Cromosoma getCromosoma() {
             return cromosoma;

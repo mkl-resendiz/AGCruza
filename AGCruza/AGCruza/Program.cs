@@ -35,24 +35,24 @@ namespace PrimerApp
         
         static void Main(string[] args)
         {
-            Individuo padre = new Individuo(6);
-            Individuo madre = new Individuo(6);
-            Console.WriteLine("Individuo Padre ->  ");
-            Console.WriteLine("[" + padre.ToString() + "]:" + padre.GetFenotipo() + " BINARIO");
+            Individuo padre = new Individuo(7);
 
-            Console.Read();
-            Console.WriteLine("Individuo Madre ->  ");
-            Console.WriteLine("[" + madre.ToString() + "]:" + madre.GetFenotipo() + " BINARIO");
+            Individuo madre = new Individuo(7);
+            //Individuo madre = new Individuo(new int[7] { 1, 0, 1, 1, 1, 1, 1});
 
-            Console.Read();
+            Console.Write("Individuo Padre ->  ");
+            Console.WriteLine("[" + padre.ToString() + "]:" + padre.GetFenotipo() + " BINARIO \n");
+
+            Console.Write("Individuo Madre ->  ");
+            Console.WriteLine("[" + madre.ToString() + "]:" + madre.GetFenotipo() + " BINARIO \n");
+
             Individuo[] hijo = padre.croos1P(madre);
 
-            Console.WriteLine("Individuo Hijo 1 ->  ");
-            Console.WriteLine("[" + hijo[0].ToString() + "]:" + hijo[0].GetFenotipo() + " BINARIO");
+            Console.Write("Individuo Hijo 1 ->  ");
+            Console.WriteLine("[" + hijo[0].ToString() + "]:" + hijo[0].GetFenotipo() + " BINARIO\n");
 
-            Console.Read();
-            Console.WriteLine("Individuo Hijo 2 ->  ");
-            Console.WriteLine("[" + hijo[1].ToString() + "]:" + hijo[1].GetFenotipo() + " BINARIO");
+            Console.Write("Individuo Hijo 2 ->  ");
+            Console.WriteLine("[" + hijo[1].ToString() + "]:" + hijo[1].GetFenotipo() + " BINARIO\n");
 
             Console.Read();
         }

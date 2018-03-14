@@ -51,7 +51,7 @@ namespace PrimerApp
             Random rnd = new Random ( );
             for (int i = 0; i < BITS_PER_GENE; i++)
             {
-                gene[i] = rnd.Next(2);
+                gene[i] = rnd.Next(0, 2);
             }
 
             geneGray[0] = gene[0];
