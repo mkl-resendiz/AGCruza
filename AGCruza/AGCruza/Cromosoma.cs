@@ -48,7 +48,7 @@ namespace PrimerApp
 
         public void inicializar() //Llenar con aleatorios
         {
-            Random rnd = new Random();
+            Random rnd = new Random((int)DateTime.Now.Ticks & 0x0000FFFF);
             
             
 
